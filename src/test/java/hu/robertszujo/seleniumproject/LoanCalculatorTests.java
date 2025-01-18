@@ -6,6 +6,7 @@ import hu.robertszujo.seleniumproject.constants.TestContextConstants;
 import hu.robertszujo.seleniumproject.pages.LoanCalculatorPage;
 import hu.robertszujo.seleniumproject.pages.components.CookiePopup;
 import org.assertj.core.api.Assertions;
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.BeforeMethod;
@@ -72,7 +73,77 @@ public class LoanCalculatorTests extends BaseTestClass {
         loanCalculatorPage.isCalculatorFormDisplayedAfterWaiting();
         reporter.pass("Loan calculator page was displayed successfully");
     }
-    
+    @Test(description = "Price of property input should be displayed after page load & accepting cookies")
+    public void loadPageAndAcceptCookies_PriceOfPropertyInputShouldBeDisplayed() {
+        //Given + When
+        loadPageAndAcceptCookies();
+
+        //Then
+        Assert.assertTrue(loanCalculatorPage.isPriceOfPropertyInputDisplayedAfterWaiting());
+        reporter.pass("Price of property input was displayed successfully");
+    }
+
+    @Test(description = "Age input should be displayed after page load & accepting cookies")
+    public void loadPageAndAcceptCookies_AgeInputShouldBeDisplayed() {
+        //Given + When
+        loadPageAndAcceptCookies();
+
+        //Then
+        Assert.assertTrue(loanCalculatorPage.isAgeInputDisplayedAfterWaiting());
+        reporter.pass("Age input was displayed successfully");
+    }
+
+    @Test(description = "Alone label should be displayed after page load & accepting cookies")
+    public void loadPageAndAcceptCookies_AloneLabelShouldBeDisplayed() {
+        //Given + When
+        loadPageAndAcceptCookies();
+
+        //Then
+        Assert.assertTrue(loanCalculatorPage.isAloneLabelDisplayedAfterWaiting());
+        reporter.pass("Alone label was displayed successfully");
+    }
+
+    @Test(description = "Multiple label should be displayed after page load & accepting cookies")
+    public void loadPageAndAcceptCookies_MultiplLabelShouldBeDisplayed() {
+        //Given + When
+        loadPageAndAcceptCookies();
+
+        //Then
+        Assert.assertTrue(loanCalculatorPage.isMultiplLabelDisplayedAfterWaiting());
+        reporter.pass("Multiple label was displayed successfully");
+    }
+
+    @Test(description = "Income input should be displayed after page load & accepting cookies")
+    public void loadPageAndAcceptCookies_IncomeInputShouldBeDisplayed() {
+        //Given + When
+        loadPageAndAcceptCookies();
+
+        //Then
+        Assert.assertTrue(loanCalculatorPage.isIncomeInputDisplayedAfterWaiting());
+        reporter.pass("Income input was displayed successfully");
+    }
+
+    @Test(description = "Existing installment input should be displayed after page load & accepting cookies")
+    public void loadPageAndAcceptCookies_ExInstallmentInputShouldBeDisplayed() {
+        //Given + When
+        loadPageAndAcceptCookies();
+
+        //Then
+        Assert.assertTrue(loanCalculatorPage.isExInstallmentInputDisplayedAfterWaiting());
+        reporter.pass("Existing installment input was displayed successfully");
+    }
+
+    @Test(description = "Account limit input should be displayed after page load & accepting cookies")
+    public void loadPageAndAcceptCookies_AccountLimitInputShouldBeDisplayed() {
+        //Given + When
+        loadPageAndAcceptCookies();
+
+        //Then
+        Assert.assertTrue(loanCalculatorPage.isAccountLimitInputDisplayedAfterWaiting());
+        reporter.pass("Account limit input was displayed successfully");
+    }
+
+
     // *** Helper methods ***
     
     private void loadPageAndAcceptCookies() {

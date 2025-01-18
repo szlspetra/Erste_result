@@ -12,7 +12,7 @@ public class ChromeDriverOptions {
         //Required to allow access from Selenium
         options.addArguments("--remote-allow-origins=*");
         //Headerless running
-        options.addArguments("--headless=new");
+        //options.addArguments("--headless=new");
 
         //Force Hungarian language as preferred for visited pages
         Map<String, Object> userSettings = Map.of("intl.accept_languages", "hu-HU,hu");
