@@ -129,7 +129,7 @@ public class LoanCalculatorTests extends BaseTestClass {
         loadPageAndAcceptCookies();
 
         //Then
-        Assert.assertTrue(loanCalculatorPage.isExInstallmentInputDisplayedAfterWaiting());
+        Assert.assertTrue(loanCalculatorPage.isCurrentLoanInputDisplayedAfterWaiting());
         reporter.pass("Existing installment input was displayed successfully");
     }
 
